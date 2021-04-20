@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+    <ion-buttons slot="start">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="profile">
+    <p id="profile-img"><img src="..\assets\img\profile.png"></p>
+    <div id="userInfos">
+      <p>Nome >>> {{userName}}</p>
+      <p>Idade >>> {{userAge}}</p>
+      <p>Peso >>> {{userPeso}}Kg <ion-button id="edit-button" id="round" (click)="editarPeso()">Editar</ion-button></p>
+      <p>Altura >>> {{userAltura}}</p>
+      <p>Meta >>> {{userGoal}} <ion-button id="edit-button" id="round">Editar</ion-button></p>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="start">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<p id="welcome">Bem Vindo {{usuario}}</p>
+<div>
+  <p>Insira a quantidade de calorias ingeridas hoje</p>
+  <ion-input type="number" placeholder="Calorias Ingeridas" class="input-infos" [(ngModel)]="calIngeridas"></ion-input>
+  <p>Insira a quantidade de calorias perdidas hoje</p>
+  <ion-input type="number" placeholder="Calorias Perdidas" class="input-infos" [(ngModel)]="calPerdidas"></ion-input>
+  <p>Insira a quantidade de agua que voce tomou hoje</p>
+  <ion-input type="number" placeholder="Agua Tomada" class="input-infos" [(ngModel)]="aguaTomada"></ion-input>
+  <ion-button expand="fill" (click)="procInfos(aguaTomada,calPerdidas,calIngeridas)" id="proc-button">Processar</ion-button>
+</div>
+
+<div>
+  <p>Calorias Ingeridas >>> {{calIngeridasProc}}</p>
+  <ion-progress-bar color="primary" value={{calIngeridasProc}}></ion-progress-bar>
+  <p>Calorias Perdidas >>> {{calPerdidasProc}}</p>
+  <ion-progress-bar color="secondary" value={{calPerdidasProc}}></ion-progress-bar>
+  <p>Agua Tomada >>> {{aguaTomadaProc}} </p>
+  <ion-progress-bar color="danger" value={{aguaTomadaProc}}></ion-progress-bar>
+</div>>
+</ion-content>
