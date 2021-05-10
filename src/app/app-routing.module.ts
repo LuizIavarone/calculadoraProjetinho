@@ -22,6 +22,14 @@ const routes: Routes = [
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
   },
+  {
+    path: 'dados',
+    loadChildren: () => import('./dados/dados.module').then( m => m.DadosPageModule)
+  },
+  {
+    path: 'tabela',
+    loadChildren: () => import('./tabela/tabela.module').then( m => m.TabelaPageModule)
+  },
 ];
 @NgModule({
   imports: [

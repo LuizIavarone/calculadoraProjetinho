@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Dados</ion-title>
+    <ion-buttons slot="start">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <p>Insira a quantidade de calorias ingeridas hoje</p>
+    <ion-input type="number" placeholder="Calorias Ingeridas" class="input-infos" [(ngModel)]="calIngeridas"></ion-input>
+    <p>Insira a quantidade de calorias perdidas hoje</p>
+    <ion-input type="number" placeholder="Calorias Perdidas" class="input-infos" [(ngModel)]="calPerdidas"></ion-input>
+    <p>Insira a quantidade de agua que voce tomou hoje</p>
+    <ion-input type="number" placeholder="Agua Tomada" class="input-infos" [(ngModel)]="aguaTomada"></ion-input>
+    <ion-button expand="fill" (click)="procInfos(aguaTomada,calPerdidas,calIngeridas)" id="proc-button">Processar</ion-button>
+  </div>
+</ion-content>

@@ -9,8 +9,10 @@ import { Router } from '@angular/Router';
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss'],
 })
+
 export class RegisterPage implements OnInit {
 
+  
   senha1;
   senha2;
   nome;
@@ -18,7 +20,7 @@ export class RegisterPage implements OnInit {
   idade;
 
   constructor(public navCtrl: NavController, public alertController: AlertController) { }
-
+  // Funções de alerta
   async showAlertErroSenha() {
     const alert = await this.alertController.create({
       header: 'Senhas Diferentes',
@@ -96,6 +98,7 @@ export class RegisterPage implements OnInit {
         this.showAlertErroNome();
       }else{
         this.showAlertSucesso();
+        //this.addItem();
       }
     }
   }
@@ -104,3 +107,5 @@ export class RegisterPage implements OnInit {
   }
 
 }
+
+

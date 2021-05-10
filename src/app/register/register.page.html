@@ -1,14 +1,10 @@
 <ion-content>
   <p id="logo-img"><img src="..\assets\img\logo.png"></p>
-  <div id="all-forms">
-    <div id="register-forms">
-      <ion-input type="text" placeholder="Nome" class="input-infos" [(ngModel)]="nome"></ion-input>
-      <ion-input type="number" placeholder="Idade" class="input-infos" [(ngModel)]="idade"></ion-input>
-      <ion-input type="email" placeholder="Email" class="input-infos" [(ngModel)]="email"></ion-input>
-      <ion-input type="password" placeholder="Senha" class="input-infos" [(ngModel)]="senha1" ></ion-input>
-      <ion-input type="password" placeholder="Confirmar Senha" class="input-infos" [(ngModel)]="senha2" ></ion-input>
-    </div>
-    <ion-button expand="fill" color="medium" (click)="validadorRegistro(senha1,senha2,nome,email,idade)" id="register-button">Finalizar Cadastro</ion-button>
-    <ion-button expand="fill" color="danger" id="cancel-register-button" routerLink="/login">Cancelar Cadastro</ion-button>
-  </div>
+  <ion-item><ion-input type="text" placeholder="Nome" class="input-infos" [(ngModel)]="nome"></ion-input></ion-item>
+  <ion-item><ion-input type="number" placeholder="Idade" class="input-infos" [(ngModel)]="idade"></ion-input></ion-item>
+  <ion-item><ion-input type="email" placeholder="Email" class="input-infos" [(ngModel)]="email"></ion-input></ion-item>
+  <ion-item><ion-input type="password" placeholder="Senha" class="input-infos" [(ngModel)]="senha1" ></ion-input></ion-item>
+  <ion-item><ion-input type="password" placeholder="Confirmar Senha" class="input-infos" [(ngModel)]="senha2" ></ion-input></ion-item>
+  <ion-button expand="fill" size="block" color="medium" (click)="validadorRegistro(senha1,senha2,nome,email,idade)" id="register-button">Finalizar Cadastro</ion-button>
+  <ion-button expand="fill" size="block" color="danger" id="cancel-register-button" routerLink="/login">Cancelar Cadastro</ion-button>
 </ion-content>
