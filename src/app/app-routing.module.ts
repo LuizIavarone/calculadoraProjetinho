@@ -30,6 +30,22 @@ const routes: Routes = [
     path: 'tabela',
     loadChildren: () => import('./tabela/tabela.module').then( m => m.TabelaPageModule)
   },
+  {
+    path: 'outrasrefeicoes',
+    loadChildren: () => import('./outrasrefeicoes/outrasrefeicoes.module').then( m => m.OutrasrefeicoesPageModule)
+  },
+  {
+    path: 'suporte',
+    loadChildren: () => import('./suporte/suporte.module').then( m => m.SuportePageModule)
+  },
+  {
+    path: 'infosnutricionais',
+    loadChildren: () => import('./infosnutricionais/infosnutricionais.module').then( m => m.InfosnutricionaisPageModule)
+  },
+  {
+    path: 'infosnutricionista',
+    loadChildren: () => import('./infosnutricionista/infosnutricionista.module').then( m => m.InfosnutricionistaPageModule)
+  },
 ];
 @NgModule({
   imports: [

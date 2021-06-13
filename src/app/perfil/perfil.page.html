@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Perfil</ion-title>
+    <ion-title>Café da Manhã</ion-title>
     <ion-buttons slot="start">
         <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
@@ -9,13 +9,15 @@
 
 <ion-content>
   <div id="profile">
-    <p id="profile-img"><img src="..\assets\img\profile.png"></p>
     <div id="userInfos">
-      <p>Nome >>> {{userName}}</p>
-      <p>Idade >>> {{userAge}}</p>
-      <p>Peso >>> {{userPeso}}Kg <ion-button id="edit-button" id="round" (click)="editarPeso()">Editar</ion-button></p>
-      <p>Altura >>> {{userAltura}}</p>
-      <p>Meta >>> {{userGoal}} <ion-button id="edit-button" id="round">Editar</ion-button></p>
+      <p>Aqui você deve inserir os dados referente ao seu café da manhã</p>
+      <p>Calorias Ingeridas >>>  </p>
+      <p><ion-input type="number" placeholder="Calorias Ingeridas" class="input-infos"></ion-input> </p>
+      <p>Quantidade de Água Tomada >>> </p>
+      <p><ion-input type="number" placeholder="Água Tomada" class="input-infos"></ion-input> </p>
+      <p>Alimentos Ingeridos >>> </p>
+      <p><ion-input type="text" placeholder="Alimentos Ingeridos" class="input-infos"></ion-input> </p>
+      <ion-button expand="fill" id="proc-button">Processar</ion-button>
     </div>
   </div>
 </ion-content>

@@ -1,5 +1,7 @@
+import { AuthService } from './../services/auth.service';
+import { User } from './../interfaces/user';
 import { Component, OnInit } from '@angular/core';
-import {NavController} from '@ionic/angular';
+import {NavController, LoadingController, ToastController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import * as EmailValidator from 'email-validator';
 import { Router } from '@angular/Router';
@@ -13,13 +15,22 @@ import { Router } from '@angular/Router';
 export class RegisterPage implements OnInit {
 
   
-  senha1;
-  senha2;
-  nome;
-  email;
-  idade;
+  public userRegister: User = {};
+  public nome;
+  public idade;
+  private loading: any;
+  private sucess: any;
 
-  constructor(public navCtrl: NavController, public alertController: AlertController) { }
+  constructor(
+    public navCtrl: NavController,
+    public alertController: AlertController,
+    private loadingController: LoadingController,
+    private toastController: ToastController,
+    private authSevice: AuthService
+    ) { }
+
+  //Desenvolvida pelo Neto
+  
   // Funções de alerta
   async showAlertErroSenha() {
     const alert = await this.alertController.create({
@@ -37,6 +48,17 @@ export class RegisterPage implements OnInit {
       header: 'Email Invalido',
       subHeader: 'Algo de errado não está certo',
       message: 'Verifique as informações e tente novamente',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
+
+  async showAlertErroRegistro() {
+    const alert = await this.alertController.create({
+      header: 'Erro Durante o Registro',
+      subHeader: 'Algo de errado não está certo',
+      message: 'Algum erro de rede ou nas suas credenciais impossibilitaram seu cadastro, verifique e tente novamente',
       buttons: ['OK']
     });
 
@@ -97,13 +119,44 @@ export class RegisterPage implements OnInit {
       }else if(nome==undefined || nome==null || nome==""){
         this.showAlertErroNome();
       }else{
-        this.showAlertSucesso();
+        console.log(this.userRegister);
+        this.register();
         //this.addItem();
       }
     }
   }
 
-  ngOnInit() {
+//Até aqui
+
+// Desenvolvida por Luiz
+
+  async register(){
+    await this.mensagemDeCarregando();
+
+    try{
+      await this.authSevice.register(this.userRegister);
+      this.sucess = 1;
+    } catch(error){
+      this.sucess = 0;
+      console.error(error);
+    } finally{
+      this.loading.dismiss();
+      if(this.sucess>0){
+        this.showAlertSucesso();
+      }else{
+        this.showAlertErroRegistro();
+      }
+    }
+  }
+
+// Função feita por Neto + Luiz por conta da integração do firebase
+
+async mensagemDeCarregando() {
+  this.loading = await this.loadingController.create({cssClass: 'my-custom-class',message: 'Por Favor Aguarde . . . ',});
+  return this.loading.present();
+}
+
+ngOnInit() {
   }
 
 }

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Dados</ion-title>
+    <ion-title>Alomoço</ion-title>
     <ion-buttons slot="start">
         <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
@@ -8,13 +8,16 @@
 </ion-header>
 
 <ion-content>
-  <div>
-    <p>Insira a quantidade de calorias ingeridas hoje</p>
-    <ion-input type="number" placeholder="Calorias Ingeridas" class="input-infos" [(ngModel)]="calIngeridas"></ion-input>
-    <p>Insira a quantidade de calorias perdidas hoje</p>
-    <ion-input type="number" placeholder="Calorias Perdidas" class="input-infos" [(ngModel)]="calPerdidas"></ion-input>
-    <p>Insira a quantidade de agua que voce tomou hoje</p>
-    <ion-input type="number" placeholder="Agua Tomada" class="input-infos" [(ngModel)]="aguaTomada"></ion-input>
-    <ion-button expand="fill" (click)="procInfos(aguaTomada,calPerdidas,calIngeridas)" id="proc-button">Processar</ion-button>
+  <div id="profile">
+    <div id="userInfos">
+      <p>Aqui você deve inserir os dados referente ao seu almoço</p>
+      <p>Calorias Ingeridas >>>  </p>
+      <p><ion-input type="number" placeholder="Calorias Ingeridas" class="input-infos"></ion-input> </p>
+      <p>Quantidade de Água Tomada >>> </p>
+      <p><ion-input type="number" placeholder="Água Tomada" class="input-infos"></ion-input> </p>
+      <p>Alimentos Ingeridos >>> </p>
+      <p><ion-input type="text" placeholder="Alimentos Ingeridos" class="input-infos"></ion-input> </p>
+      <ion-button expand="fill" id="proc-button">Processar</ion-button>
+    </div>
   </div>
 </ion-content>

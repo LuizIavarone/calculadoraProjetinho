@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Tabela</ion-title>
+    <ion-title>Jantar</ion-title>
     <ion-buttons slot="start">
         <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
@@ -8,92 +8,16 @@
 </ion-header>
 
 <ion-content>
-<ion-row style="border-bottom: groove;">
-      <ion-col col-4>
-      <ion-label >Data</ion-label>
-    </ion-col>
-    <ion-col col-4>
-      <ion-label >Meta Calorias</ion-label>
-    </ion-col>
-      <ion-col col-4>
-      <ion-label >Meta água</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-      <ion-col col-4>
-      <ion-label >09/05/2021</ion-label>
-    </ion-col>
-    <ion-col col-4>
-      <ion-label >2150 | 2000</ion-label>
-    </ion-col>
-      <ion-col col-4>
-      <ion-label >2498 | 2000</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-      <ion-col col-4>
-      <ion-label >08/05/2021</ion-label>
-    </ion-col>
-    <ion-col col-4>
-      <ion-label >1900 | 2000</ion-label>
-    </ion-col>
-      <ion-col col-4>
-      <ion-label >1450 | 2000</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;" >
-      <ion-col col-4>
-      <ion-label >07/05/2021</ion-label>
-    </ion-col>
-    <ion-col col-4>
-      <ion-label >1962 | 2000</ion-label>
-    </ion-col>
-      <ion-col col-4>
-      <ion-label >2900 | 2000</ion-label>
-    </ion-col>
-  </ion-row>
-  <ion-row style="border-bottom: groove;">
-    <ion-col col-4>
-    <ion-label >06/05/2021</ion-label>
-  </ion-col>
-  <ion-col col-4>
-    <ion-label >3400 | 2000</ion-label>
-  </ion-col>
-    <ion-col col-4>
-    <ion-label >1500 | 2000</ion-label>
-  </ion-col>
-</ion-row>
-<ion-row style="border-bottom: groove;" >
-    <ion-col col-4>
-    <ion-label >05/05/2021</ion-label>
-  </ion-col>
-  <ion-col col-4>
-    <ion-label >2765 | 2000</ion-label>
-  </ion-col>
-    <ion-col col-4>
-    <ion-label >1000 | 2000</ion-label>
-  </ion-col>
-</ion-row>
-<ion-row style="border-bottom: groove;">
-  <ion-col col-4>
-  <ion-label >04/05/2021</ion-label>
-</ion-col>
-<ion-col col-4>
-  <ion-label >2600 | 2000</ion-label>
-</ion-col>
-  <ion-col col-4>
-  <ion-label >0 | 2000</ion-label>
-</ion-col>
-</ion-row>
-<ion-row style="border-bottom: groove;" >
-  <ion-col col-4>
-  <ion-label >03/05/2021</ion-label>
-</ion-col>
-<ion-col col-4>
-  <ion-label >1400 | 2000</ion-label>
-</ion-col>
-  <ion-col col-4>
-  <ion-label >2670 | 2000</ion-label>
-</ion-col>
-</ion-row>
+  <div id="profile">
+    <div id="userInfos">
+      <p>Aqui você deve inserir os dados referente ao seu Jantar</p>
+      <p>Calorias Ingeridas >>>  </p>
+      <p><ion-input type="number" placeholder="Calorias Ingeridas" class="input-infos"></ion-input> </p>
+      <p>Quantidade de Água Tomada >>> </p>
+      <p><ion-input type="number" placeholder="Água Tomada" class="input-infos"></ion-input> </p>
+      <p>Alimentos Ingeridos >>> </p>
+      <p><ion-input type="text" placeholder="Alimentos Ingeridos" class="input-infos"></ion-input> </p>
+      <ion-button expand="fill" id="proc-button">Processar</ion-button>
+    </div>
+  </div>
 </ion-content>
