@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NavController} from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import * as EmailValidator from 'email-validator';
-import { Router } from '@angular/Router';
+
 
 @Component({
   selector: 'app-home',
