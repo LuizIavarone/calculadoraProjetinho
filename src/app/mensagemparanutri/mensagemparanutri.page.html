@@ -1,0 +1,28 @@
+<!-- Desenvolvida pelo Lucas -->
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Suporte</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-back-button color="dark" class="save-button" defaultHref="/home" routerLink="/home" routerLinkActive="active-route">
+  </ion-back-button>
+
+  <ion-item>
+    <ion-label>Titulo:</ion-label>
+    <ion-input [(ngModel)]="tituloParaNutri"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label  position="start">Escreva sua mansagem:</ion-label>
+    <ion-textarea  class="tamanho" [(ngModel)]="mensagemNutricionista"></ion-textarea>
+  </ion-item>
+
+  <ion-button size="block" class="cadastrar" (click)="enviaMensagem()">
+    Enviar mensagem
+  </ion-button>
+
+</ion-content>

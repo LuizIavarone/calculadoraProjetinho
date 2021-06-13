@@ -46,6 +46,10 @@ const routes: Routes = [
     path: 'infosnutricionista',
     loadChildren: () => import('./infosnutricionista/infosnutricionista.module').then( m => m.InfosnutricionistaPageModule)
   },
+  {
+    path: 'mensagemparanutri',
+    loadChildren: () => import('./mensagemparanutri/mensagemparanutri.module').then( m => m.MensagemparanutriPageModule)
+  },
 ];
 @NgModule({
   imports: [

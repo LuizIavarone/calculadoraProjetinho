@@ -1,6 +1,7 @@
 <!-- Desenvolvida pelo Neto -->
 
 <ion-content>
+
   <p id="logo-img"><img src="..\assets\img\logo.png"></p>
   <ion-item><ion-input type="text" placeholder="Nome" class="input-infos" [(ngModel)]="nome"></ion-input></ion-item>
   <ion-item><ion-input type="number" placeholder="Idade" class="input-infos" [(ngModel)]="idade"></ion-input></ion-item>
@@ -9,4 +10,5 @@
   <ion-item><ion-input type="password" placeholder="Confirmar Senha" class="input-infos" [(ngModel)]="userRegister.password" ></ion-input></ion-item>
   <ion-button expand="fill" size="block" color="medium" (click)="validadorRegistro(userRegister.password,userRegister.password,nome,userRegister.email,idade)"   id="register-button">Finalizar Cadastro</ion-button>
   <ion-button expand="fill" size="block" color="danger" id="cancel-register-button" routerLink="/login">Cancelar Cadastro</ion-button>
+  
 </ion-content>

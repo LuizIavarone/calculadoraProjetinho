@@ -2,7 +2,7 @@
 
 <ion-header>
   <ion-toolbar>
-    <ion-title>Alomoço</ion-title>
+    <ion-title>Almoço</ion-title>
     <ion-buttons slot="start">
         <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
@@ -12,14 +12,14 @@
 <ion-content>
   <div id="profile">
     <div id="userInfos">
-      <p>Aqui você deve inserir os dados referente ao seu almoço</p>
+      <p>Aqui você deve inserir os dados referente ao seu Almoço</p>
       <p>Calorias Ingeridas >>>  </p>
-      <p><ion-input type="number" placeholder="Calorias Ingeridas" class="input-infos"></ion-input> </p>
+      <p><ion-input type="number" placeholder="Calorias Ingeridas" class="input-infos" [(ngModel)]="CaloriasIngeridas"></ion-input> </p>
       <p>Quantidade de Água Tomada >>> </p>
-      <p><ion-input type="number" placeholder="Água Tomada" class="input-infos"></ion-input> </p>
+      <p><ion-input type="number" placeholder="Água Tomada" class="input-infos" [(ngModel)]="AguaTomada"></ion-input> </p>
       <p>Alimentos Ingeridos >>> </p>
-      <p><ion-input type="text" placeholder="Alimentos Ingeridos" class="input-infos"></ion-input> </p>
-      <ion-button expand="fill" id="proc-button">Processar</ion-button>
+      <p><ion-input type="text" placeholder="Alimentos Ingeridos" class="input-infos" [(ngModel)]="AlimentosIngeridos"></ion-input> </p>
+      <ion-button expand="fill" id="proc-button" (click)="enviarJantar()">Processar</ion-button>
     </div>
   </div>
 </ion-content>

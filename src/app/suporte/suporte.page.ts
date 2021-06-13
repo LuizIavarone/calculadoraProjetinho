@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-suporte',
@@ -7,7 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuportePage implements OnInit {
 
-  constructor() { }
+  constructor(public alertController: AlertController) { }
+
+  public Email: String;
+  public Telefone: String;
+  public Problema: String;
+
+  async showAlertSucesso() {
+    const alert = await this.alertController.create({
+      header: 'Ticket Enviado',
+      message: 'Seu Ticket foi aberto, aguarde retorno via email',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
+
+  enviarProblemas(){
+    this.showAlertSucesso();
+    this.Email = "";
+    this.Telefone = "";
+    this.Problema = "";
+  }
 
   ngOnInit() {
   }

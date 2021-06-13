@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tabela',
@@ -7,7 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabelaPage implements OnInit {
 
-  constructor() { }
+  constructor(public alertController: AlertController) { }
+
+  public AlimentosIngeridos: String;
+  public AguaTomada: String;
+  public CaloriasIngeridas: String;
+
+  async showAlertSucesso() {
+    const alert = await this.alertController.create({
+      header: 'Janta Enviada',
+      message: 'Sua Janta foi enviada para a nutricionista',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
+
+  enviarJantar(){
+    this.showAlertSucesso();
+    this.CaloriasIngeridas = "";
+    this.AguaTomada = "";
+    this.AlimentosIngeridos = "";
+  }
 
   ngOnInit() {
   }
